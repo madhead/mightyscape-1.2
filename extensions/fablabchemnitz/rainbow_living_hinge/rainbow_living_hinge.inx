@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Living Hinge (Rainbow-shaped)</name>
+    <id>fablabchemnitz.de.rainbow_living_hinge</id>
+
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="FabLab Chemnitz">
+                <submenu name="Shape/Pattern from Generator" />
+            </submenu>
+        </effects-menu>
+    </effect>
+
+    <script>
+        <command location="inx" interpreter="python">rainbow_living_hinge.py</command>
+    </script>
+
+    <hbox>
+        <vbox>
+            <param name="angle" type="float" min="0" max="180" gui-text="Apex Angle (degrees)">40</param>
+            <param name="arc" type="float" min="10" max="10000" gui-text="Arc (mm)">230</param>
+            <param name="height" type="float" min="10" max="10000" gui-text="Height (mm)">60</param>
+
+            <param name="horizontalLineSeparation" type="float" min="0.1" max="100"
+                gui-text="Horizontal Line Separation (mm)">1.0</param>
+            <param name="verticalLineSeparation" type="float" min="0.1" max="100"
+                gui-text="Vertical Line Separation (mm)">3.0</param>
+            <param name="maxLineLength" type="float" min="1.0" max="10000"
+                gui-text="Maximum Line Length (mm)">30</param>
+
+            <param name="constructionGeometry" type="bool" gui-text="Draw Construction Geometry">false</param>
+        </vbox>
+
+        <hbox>
+            <spacer size="expand" />
+            <image>example.svg</image>
+            <spacer size="expand" />
+        </hbox>
+    </hbox>
+</inkscape-extension>
